@@ -1,37 +1,52 @@
-package dashboard
+package northstar
+
+ 
 
 import future.keywords.if
 import future.keywords.in
 import data.dashboard
+ 
 
 default allow := false
 
-allowed_actions := data.dashboard.user_resources[input.realm][input.user].actions
+ 
+
+#allowed_actions := data.dashbaord.user_resources[input.realm][input.user].actions
+
+ 
 
 # Allow some paths by default:
-allow {
+allow if {
     default_allowed_paths
 }
 
-default_allowed_paths {
+ 
+
+default_allowed_paths if {
     some path
-    startswith(input.path, data.dashboard.allowed_paths[path])
+    startswith(input.path, data.dashbaord.allowed_paths[path])
 }
+
+ 
 
 # Dynamically determine the resource and permission:
-allow {
-    requested_resource == data.dashboard.user_resources[input.realm][input.user].resource
-    requested_operation == data.dashboard.user_resources[input.realm][input.user].actions[_]
+allow if {
+    requested_resource == data.dashbaord.user_resources[input.realm][input.user].resource
+    requested_operation == data.dashbaord.user_resources[input.realm][input.user].actions[_]
 }
 
-requested_resource = result {
+ 
+
+requested_resource = result if {
     some resource, operation
-    input.path == data.dashboard.resource_paths[resource][operation][_]
+    input.path == data.dashbaord.resource_paths[resource][operation][_]
     result = resource
 }
 
-requested_operation = result {
+ 
+
+requested_operation = result if {
     some resource, operation
-    input.path == data.dashboard.resource_paths[resource][operation][_]
+    input.path == data.dashbaord.resource_paths[resource][operation][_]
     result = operation
 }
