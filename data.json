@@ -1,90 +1,80 @@
 {
-  "users": {
-    "alice": {
-      "roles": ["admin"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
+  "user_resources": {
+      "floormart": {
+          "gwoodhouse": {
+              "resource": "dashboards",
+              "actions": [
+                  "ViewDashboard",
+                  "ViewTeamDashboard"
+              ]
+          },
+          "ap_manager": {
+              "resource": "dashboards",
+              "actions": [
+                  "ViewDashboard"
+              ]
+          }
+      },
+      "c3po": {
+          "speter": {
+              "resource": "workspace",
+              "actions": [
+                  "ViewWorkspace",
+                  "AddWorkspace"
+              ]
+          },
+          "bob": {
+              "resource": "workspace",
+              "actions": [
+                  "ViewWorkspace"
+              ]
+          }
       }
-    },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "Mexico",
-        "ip": "8.8.8.8"
-      }
-    },
-     "sunil": {
-      "roles": ["guest"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "eve": {
-      "roles": ["customer"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    }
   },
-  "role_permissions": {
-    "customer": [
-      {
-        "action": "read",
-        "type": "dog"
+  "allowed_paths": [
+      "/floormart",
+      "/palettes",
+      "/company",
+      "/users",
+      "/fe-configuration",
+      "/preferences",
+      "/feature",
+      "/archived-projects",
+      "/workspaces",
+      "/account",
+      "/favicon",
+      "/subscriptions",
+      "/signalr",
+      "/project",
+      "/invoices",
+      "/groups",
+      "/notification"
+  ],
+  "resource_paths": {
+      "dashboards": {
+          "ViewDashboard": [
+              "/dashboards/invoices/summary",
+              "/dashboards/invoices/unprocessed-invoices-by-due-date",
+              "/dashboards/invoices/processed-invoices-by-due-date",
+              "/dashboards/tasks/urgent",
+              "/dashboards/tasks/by-type",
+              "/dashboards/tasks/by-age",
+              "/dashboards/payments/active-payments-by-status",
+              "/dashboards/payments/failed-payments",
+              "/dashboards/payments/processed-payments-by-projects-per-day",
+              "/dashboards/payments/active-payments-by-projects",
+              "/dashboards/payments/processed-payments-by-projects"
+          ],
+          "ViewTeamDashboard": [
+              "/dashboards/invoices/team-members",
+              "/dashboards/invoices/by-po",
+              "/dashboards/invoices/processed-invoices-per-day"
+          ]
       },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "adopt",
-        "type": "dog"
-      },
-      {
-        "action": "adopt",
-        "type": "cat"
+      "workspace": {
+          "ViewWorkspace": [
+              "/workspace/view"
+          ]
       }
-    ],
-    "employee": [
-      {
-        "action": "read",
-        "type": "dog"
-      },
-      {
-        "action": "read",
-        "type": "cat"
-      },
-      {
-        "action": "update",
-        "type": "dog"
-      },
-      {
-        "action": "update",
-        "type": "cat"
-      }
-    ],
-    "billing": [
-      {
-        "action": "read",
-        "type": "finance"
-      },
-      {
-        "action": "update",
-        "type": "finance"
-      }
-    ],
-    "guest": [
-     {
-       "action": "read",
-       "type": "cat"
-     },
-     {
-       "action": "read",
-       "type": "finance"
-     }
-    ]
   }
 }
