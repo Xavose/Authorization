@@ -2,14 +2,14 @@
     "user_resources": {
         "floormart": {
             "gwoodhouse": {
-                "resource": "dashboard",
+                "resource": "dashboards",
                 "actions": [
                     "ViewDashboard",
                     "ViewTeamDashboard"
                 ]
             },
             "ap_manager": {
-                "resource": "dashboard",
+                "resource": "dashboards",
                 "actions": [
                     "ViewDashboard"
                 ]
@@ -51,7 +51,7 @@
         "/notification"
     ],
     "resource_paths": {
-        "dashboard": {
+        "dashboards": {
             "ViewDashboard": [
                 "/dashboards/invoices/summary",
                 "/dashboards/invoices/unprocessed-invoices-by-due-date",
