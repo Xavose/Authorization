@@ -7,13 +7,6 @@
         "ip": "8.8.8.8"
       }
     },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
      "sunil": {
       "roles": ["guest"],
       "location": {
