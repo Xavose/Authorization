@@ -2,7 +2,7 @@ package dashboard
 
 import future.keywords.if
 import future.keywords.in
-import data.dashboard
+# import data.dashboard
 
 default allow := false
 
