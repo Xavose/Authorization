@@ -2,14 +2,21 @@
     "user_resources": {
         "floormart": {
             "gwoodhouse": {
-                "resource": "dashboards",
+                "resource": ["dashboards"],
+                "actions": [
+                    "ViewDashboard",
+                    "ViewTeamDashboard"
+                ]
+            },
+            "zvosburgh": {
+                "resource": ["dashboards"],
                 "actions": [
                     "ViewDashboard",
                     "ViewTeamDashboard"
                 ]
             },
             "ap_manager": {
-                "resource": "dashboards",
+                "resource": ["dashboards"],
                 "actions": [
                     "ViewDashboard"
                 ]
@@ -17,14 +24,14 @@
         },
         "c3po": {
             "speter": {
-                "resource": "workspace",
+                "resource": ["workspace"],
                 "actions": [
                     "ViewWorkspace",
                     "AddWorkspace"
                 ]
             },
             "bob": {
-                "resource": "workspace",
+                "resource": ["workspace"],
                 "actions": [
                     "ViewWorkspace"
                 ]

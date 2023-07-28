@@ -20,7 +20,7 @@ default_allowed_paths {
 
 # Dynamically determine the resource and permission:
 allow {
-    requested_resource == data.user_resources[input.realm][input.user].resource
+    requested_resource == data.user_resources[input.realm][input.user].resource[_]
     requested_operation == data.user_resources[input.realm][input.user].actions[_]
 }
 
