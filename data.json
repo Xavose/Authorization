@@ -61,14 +61,14 @@
 	},
   "permissions": {
     "administrator": {
-      "resource": "dashboard",
+      "resource": ["dashboard"],
       "actions": [
         "ViewDashboard",
         "ViewTeamDashboard"
       ]
     },
     "ap_manager": {
-      "resource": "dashboard",
+      "resource": ["dashboard"],
       "actions": [
         "ViewDashboard"
       ]
