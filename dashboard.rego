@@ -2,7 +2,7 @@ package app.dashboard
 
 import future.keywords.if
 
-default allow := false
+default allow := true
 
 # Loop over the roles in the input to allow multiple roles
 allowed_actions[role] := data.permissions[role].actions
