@@ -8,13 +8,6 @@
                     "ViewTeamDashboard"
                 ]
             },
-            "zvosburgh": {
-                "resource": ["dashboards"],
-                "actions": [
-                    "ViewDashboard",
-                    "ViewTeamDashboard"
-                ]
-            },
             "ap_manager": {
                 "resource": ["dashboards"],
                 "actions": [
