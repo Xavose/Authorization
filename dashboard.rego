@@ -1,4 +1,4 @@
-package northstar
+package app.rbac
 
 import future.keywords.if
 
