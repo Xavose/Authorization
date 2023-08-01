@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "administrator": {
+      "resource": "dashboard",
+      "actions": [
+        "ViewDashboard",
+        "ViewTeamDashboard"
+      ]
+    },
+    "ap_manager": {
+      "resource": "dashboard",
+      "actions": [
+        "ViewDashboard"
+      ]
+    }
+  }
+}

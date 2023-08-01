@@ -1,0 +1,62 @@
+{
+	"allowed_paths": [
+		"/floormart",
+		"/palettes",
+		"/company",
+		"/users",
+		"/fe-configuration",
+		"/preferences",
+		"/feature",
+		"/archived-projects",
+		"/workspaces",
+		"/account",
+		"/favicon",
+		"/subscriptions",
+		"/signalr",
+		"/project",
+		"/invoices",
+		"/groups",
+		"/notification",
+		"/jobs",
+		"/index-field",
+		"/general-ledger",
+		"/tasks",
+		"/roles",
+		"/task-user-preferences",
+		"/task-definitions",
+		"/connections",
+		"/printers",
+		"/dataproxy",
+		"/agents",
+		"projects-permission"
+	],
+	"resource_paths": {
+		"dashboard": {
+			"ViewDashboard": [
+				"/dashboards/invoices/summary",
+				"/dashboards/invoices/unprocessed-invoices-by-due-date",
+				"/dashboards/invoices/processed-invoices-by-due-date",
+				"/dashboards/tasks/urgent",
+				"/dashboards/tasks/by-type",
+				"/dashboards/tasks/by-age",
+				"/dashboards/tasks/completed-by-type",
+				"/dashboards/tasks/completed-tasks-performance-trend",
+				"/dashboards/payments/active-payments-by-status",
+				"/dashboards/payments/failed-payments",
+				"/dashboards/payments/processed-payments-by-projects-per-day",
+				"/dashboards/payments/active-payments-by-projects",
+				"/dashboards/payments/processed-payments-by-projects"
+			],
+			"ViewTeamDashboard": [
+				"/dashboards/invoices/team-members",
+				"/dashboards/invoices/by-po",
+				"/dashboards/invoices/processed-invoices-per-day"
+			]
+		},
+		"workspace": {
+			"ViewWorkspace": [
+				"/workspace/view"
+			]
+		}
+	}
+}
