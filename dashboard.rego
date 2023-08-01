@@ -1,3 +1,12 @@
+package dashboard
+
+import future.keywords.if
+
+default allow := false
+
+# Loop over the roles in the input to allow multiple roles
+allowed_actions[role] := data.permissions[role].actions
+
 # Allow some paths by default:
 allow {
     default_allowed_paths
