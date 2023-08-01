@@ -21,7 +21,7 @@ default_allowed_paths {
 # Loop over the roles in the input
 allow {
     some i
-    requested_resource == data.permissions[input.roles[i]].resource
+    requested_resource == data.permissions[input.roles[i]].resource[_]
     requested_action == data.permissions[input.roles[i]].actions[_]
 }
 
