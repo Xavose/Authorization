@@ -1,8 +1,6 @@
 package northstar
 
 import future.keywords.if
-import data.resourcedata
-import data.pathdata
 
 default allow := false
 
@@ -13,7 +11,7 @@ allow {
 
 default_allowed_paths {
     some path
-    startswith(input.path, data.pathdata.allowed_paths[path])
+    startswith(input.path, data.allowed_paths[path])
 }
 
 # Pattern matching for GUIDs
@@ -26,26 +24,26 @@ allow if {
 #Find resource
 requested_resource = result if {
     some res, act
-    input.path == data.pathdata.resource_paths[res][act][_]
+    input.path == data.resource_paths[res][act][_]
     result = res
 }
 
 #Find action
 requested_action = result if {
     some res, act
-    input.path == data.pathdata.resource_paths[res][act][_]
+    input.path == data.resource_paths[res][act][_]
     result = act
 }
 
 #Search requested action in permissions
 allowed_resource = result if {
     some rol,res,act
-    requested_action == data.resourcedata.permissions[rol][res][act][_]
+    requested_action == data.permissions[rol][res][act][_]
     result = res
 }
 
 # Compare requested and allowed 
 allow if {
     requested_resource == allowed_resource
-    requested_action == data.resourcedata.permissions[input.roles[_]][requested_resource][act][_]
+    requested_action == data.permissions[input.roles[_]][requested_resource][act][_]
 }
