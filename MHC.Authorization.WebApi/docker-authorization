@@ -1,0 +1,24 @@
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+WORKDIR /app
+EXPOSE 80
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+
+WORKDIR /
+COPY nuget.config /src/Nuget/
+
+WORKDIR /src
+#COPY src/Services/Authorization/MHC.Authorization.WebApi/MHC.Authorization.WebApi.csproj src/Services/Authorization/MHC.Authorization.WebApi/
+COPY MHC.Authorization.WebApi/MHC.Authorization.WebApi.csproj MHC.Authorization.WebApi/
+
+#RUN dotnet restore --configfile /src/Nuget/nuget.config "src/Services/Authorization/MHC.Authorization.WebApi/MHC.Authorization.WebApi.csproj"
+RUN dotnet restore --configfile /src/Nuget/nuget.config "src/MHC.Authorization.WebApi/MHC.Authorization.WebApi.csproj"
+COPY . .
+WORKDIR "/src/src/Services/Authorization"
+RUN dotnet build "MHC.Authorization.WebApi/MHC.Authorization.WebApi.csproj" -c Release -o /app/build
+FROM build AS publish
+RUN dotnet publish "MHC.Authorization.WebApi/MHC.Authorization.WebApi.csproj" -c Release -o /app/publish
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "MHC.Authorization.WebApi.dll"]

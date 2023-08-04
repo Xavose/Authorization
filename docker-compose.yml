@@ -1,0 +1,17 @@
+version: '3.8'
+
+networks:
+  mhc:
+    name: mhc-network
+
+services:
+  mhc-authorization-webapi:
+    image: mhc-authorization-webapi:latest
+    container_name: mhc-authorization-webapi
+    build:
+      context: .
+      dockerfile: src/MHC.Authorization.WebApi/docker-authorization
+    networks:
+      - mhc
+    ports:
+      - 5046:80

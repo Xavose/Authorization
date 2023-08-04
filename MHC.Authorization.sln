@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MHC.Authorization.WebApi", "MHC.Authorization.WebApi\MHC.Authorization.WebApi.csproj", "{5F39C621-5D87-423E-A6FA-0B52E9C7394F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MHC.Authorization.Core", "MHC.Authorization.Core\MHC.Authorization.Core.csproj", "{CC69D4D9-22F3-4F89-9E2E-7624D3E9A6F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8D44622E-B1C5-4998-9307-8C95DBDF73F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHC.Authorization.Core.UnitTests", "MHC.Authorization.Core.UnitTests\MHC.Authorization.Core.UnitTests.csproj", "{C8D3E0E8-D6C8-478F-89E4-AFB0B8D17397}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHC.Authorization.WebApi.UnitTests", "MHC.Authorization.WebApi.UnitTests\MHC.Authorization.WebApi.UnitTests.csproj", "{F3CB6859-B210-4732-B1F8-45DD2011781F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F39C621-5D87-423E-A6FA-0B52E9C7394F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F39C621-5D87-423E-A6FA-0B52E9C7394F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F39C621-5D87-423E-A6FA-0B52E9C7394F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F39C621-5D87-423E-A6FA-0B52E9C7394F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC69D4D9-22F3-4F89-9E2E-7624D3E9A6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC69D4D9-22F3-4F89-9E2E-7624D3E9A6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC69D4D9-22F3-4F89-9E2E-7624D3E9A6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC69D4D9-22F3-4F89-9E2E-7624D3E9A6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8D3E0E8-D6C8-478F-89E4-AFB0B8D17397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8D3E0E8-D6C8-478F-89E4-AFB0B8D17397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8D3E0E8-D6C8-478F-89E4-AFB0B8D17397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8D3E0E8-D6C8-478F-89E4-AFB0B8D17397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CB6859-B210-4732-B1F8-45DD2011781F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CB6859-B210-4732-B1F8-45DD2011781F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CB6859-B210-4732-B1F8-45DD2011781F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CB6859-B210-4732-B1F8-45DD2011781F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C8D3E0E8-D6C8-478F-89E4-AFB0B8D17397} = {8D44622E-B1C5-4998-9307-8C95DBDF73F5}
+		{F3CB6859-B210-4732-B1F8-45DD2011781F} = {8D44622E-B1C5-4998-9307-8C95DBDF73F5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58EF9811-072F-4A06-9760-DFAA96D8E9FB}
+	EndGlobalSection
+EndGlobal
