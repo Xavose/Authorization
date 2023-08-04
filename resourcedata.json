@@ -1,0 +1,37 @@
+{
+	"permissions": {
+        "administrator": {
+            "dashboard": {
+                "actions": [
+                    "ViewDashboard",
+                    "ViewTeamDashboard"
+                ]
+            },
+            "workspace": {
+                "actions": [
+                    "ViewWorkspacesList",
+                    "ViewWorkspaceDetails"
+                ]
+            }
+        },
+        "ap manager": {
+            "dashboard": {
+                "actions": [
+                    "ViewDashboard"
+                ]
+            },
+            "workspace": {
+                "actions": [
+                    "ViewWorkspaceDetails"
+                ]
+            }
+        },
+        "ap processor": {
+            "dashboard": {
+                "actions": [
+                    "ViewDashboard"
+                ]
+            }
+        }
+	}
+}

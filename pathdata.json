@@ -8,7 +8,6 @@
 		"/preferences",
 		"/feature",
 		"/archived-projects",
-		"/workspaces",
 		"/account",
 		"/favicon",
 		"/subscriptions",
@@ -28,7 +27,7 @@
 		"/printers",
 		"/dataproxy",
 		"/agents",
-		"projects-permission"
+		"/projects-permission"
 	],
 	"resource_paths": {
 		"dashboard": {
@@ -54,24 +53,14 @@
 			]
 		},
 		"workspace": {
-			"ViewWorkspace": [
-				"/workspace/view"
+			"ViewWorkspacesList": [
+				"/workspaces/grid"
+			],
+			"ViewWorkspaceDetails": [
+				"/workspaces",
+				"/workspaces/archived-projects",
+				"/workspaces/recent"
 			]
 		}
-	},
-  "permissions": {
-    "administrator": {
-      "resource": ["dashboard"],
-      "actions": [
-        "ViewDashboard",
-        "ViewTeamDashboard"
-      ]
-    },
-    "ap_manager": {
-      "resource": ["dashboard"],
-      "actions": [
-        "ViewDashboard"
-      ]
-    }
-  }
+	}
 }
